@@ -57,6 +57,8 @@ The data is now in the form of a list and needs to be converted to a csv file. T
 If the value matches the date/time column, it is marked as the start of a record through the flag. The value is then appended to a list and continues adding values to the list till the value matches the Incident ORI column. Each time a value is appended to the list, the count of values is incremented. Once it matches with the Incident ORI column values, the count is checked to see if there are any missing fields. If the count is 2; it implies that only the date time, incident number fields were present for the record before the incident ori value. In such case, two empty values are appended to the list. Else if the count is 4; it is implied that all values are present for the record. 
 The values are then written as a row to the csv file. The flag, count and list are reset to continue with the process.
 
+![project0-flow drawio (1)](https://user-images.githubusercontent.com/98193657/157372658-dc7029d7-e663-4e39-a7c0-6a7e242d83ce.png)
+  
 Once the process is completed, the name of the csv file is returned.
 
 Note: Written code creates a csv file with no empty rows in between when run on jupyter lab where as the csv file has empty rows in between when run on the PyCharm IDE
@@ -115,3 +117,17 @@ The number of rows in the csv file and number of records are asserted. Also, bot
 
 ## test_status
 Runs the status function with the database name. The returned values from the method are then iterated over to obtain the different number of natures available in the database.
+
+## Steps for local deployment
+
+1] Clone the repository using the below command
+git clone https://github.com/SSharath-Kumar/cs5293sp22-project0
+
+2] Install the required dependencies using the command:
+pipenv install
+
+## Running the project
+pipenv run python main.py --incidents (url)
+
+## Running the test cases
+pipenv run python -m pytest
