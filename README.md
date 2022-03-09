@@ -78,8 +78,11 @@ From the arguments, the csv file is opened and read using the csv module. The qu
 Now, the data from the csv file is iterated and if the row is not empty, data from the row is inserted into the database using the insert query.
 **Note**: This can be done using executemany() without iterating if the csv file doesn't contain any empty records in between
 
---Refer to the screenshots for difference--
-
+*Refer to below screenshots for difference*
+![JupyterLab Gen CSV](https://user-images.githubusercontent.com/98193657/157362700-33bbc8a5-bab1-4d76-817d-2ee6601f6d00.png)
+![PyCharm Gen CSV](https://user-images.githubusercontent.com/98193657/157362702-7d666c67-28eb-4066-8666-14a2b57bbea4.png)
+  
+  
 Once all the data is inserted, the changes are then commited using the commit() method.
 
 Note: This function doesn't return any values
